@@ -5,3 +5,4 @@
 - 2025-11-14T14:23:45+05:30: Updated vendor integration
 - 2025-11-14T23:03:17+05:30: Updated vendor integration
 - 2025-11-14T19:07:15+05:30: Updated map rendering
+- 2025-11-14T15:25:24+05:30: Improved order flow logic
