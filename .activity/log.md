@@ -17,3 +17,4 @@
 - 2025-11-24T10:16:07+05:30: Updated vendor integration
 - 2025-11-24T11:22:17+05:30: Updated map rendering
 - 2025-11-24T18:31:49+05:30: Refactored payment module
+- 2025-11-25T22:20:50+05:30: Improved order flow logic
