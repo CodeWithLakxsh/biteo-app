@@ -214,3 +214,4 @@
 - 2025-11-24T08:55:56+05:30: Order pipeline fix
 - 2025-11-24T18:14:21+05:30: Payment gateway update
 - 2025-11-26T23:59:20+05:30: Payment gateway update
+- 2025-11-28T09:51:56+05:30: Geofence optimization
