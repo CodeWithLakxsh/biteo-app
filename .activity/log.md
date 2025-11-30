@@ -228,3 +228,4 @@
 - 2025-11-29T10:47:59+05:30: Geofence optimization
 - 2025-11-29T10:51:35+05:30: Push service rework
 - 2025-11-30T20:29:02+05:30: Order pipeline fix
+- 2025-11-30T18:22:28+05:30: Payment gateway update
