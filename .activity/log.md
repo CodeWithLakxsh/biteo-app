@@ -231,3 +231,4 @@
 - 2025-11-30T18:22:28+05:30: Payment gateway update
 - 2025-12-02T21:09:57+05:30: Push service rework
 - 2025-12-02T17:02:29+05:30: Push service rework
+- 2025-12-02T22:50:38+05:30: Order pipeline fix
