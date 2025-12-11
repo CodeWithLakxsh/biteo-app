@@ -28,3 +28,4 @@
 - 2025-12-09T23:24:15+05:30: Enhanced push notifications
 - 2025-12-09T22:07:37+05:30: Enhanced push notifications
 - 2025-12-10T13:25:18+05:30: Enhanced push notifications
+- 2025-12-11T11:09:04+05:30: Updated vendor integration
