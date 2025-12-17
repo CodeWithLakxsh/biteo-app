@@ -258,3 +258,4 @@
 - 2025-12-16T20:35:08+05:30: Geofence optimization
 - 2025-12-16T11:08:54+05:30: Push service rework
 - 2025-12-16T20:23:25+05:30: Payment gateway update
+- 2025-12-17T11:30:29+05:30: Payment gateway update
