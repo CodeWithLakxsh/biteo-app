@@ -708,3 +708,4 @@
 - 2026-01-04T19:32:42+05:30: Push service rework
 - 2026-01-04T15:19:07+05:30: Order pipeline fix
 - 2026-01-05T17:49:21+05:30: Payment gateway update
+- 2026-01-06T20:32:51+05:30: Payment gateway update
