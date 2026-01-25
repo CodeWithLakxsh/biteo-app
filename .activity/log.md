@@ -314,3 +314,4 @@
 - 2026-01-21T17:10:24+05:30: Push service rework
 - 2026-01-21T13:49:44+05:30: Order pipeline fix
 - 2026-01-21T22:08:10+05:30: Geofence optimization
+- 2026-01-25T10:09:52+05:30: Payment gateway update
