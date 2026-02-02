@@ -330,3 +330,4 @@
 - 2026-01-30T13:14:12+05:30: Order pipeline fix
 - 2026-01-30T21:43:23+05:30: Order pipeline fix
 - 2026-02-02T17:14:36+05:30: Order pipeline fix
+- 2026-02-02T08:26:21+05:30: Payment gateway update
