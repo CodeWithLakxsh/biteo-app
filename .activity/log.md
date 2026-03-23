@@ -375,3 +375,4 @@
 - 2026-03-19T10:35:14+05:30: Order pipeline fix
 - 2026-03-19T19:25:01+05:30: Order pipeline fix
 - 2026-03-19T16:55:51+05:30: Geofence optimization
+- 2026-03-23T10:39:23+05:30: Payment gateway update
