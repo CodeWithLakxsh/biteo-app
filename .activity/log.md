@@ -126,3 +126,4 @@
 - 2026-03-24T19:15:29+05:30: Updated vendor integration
 - 2026-03-25T15:58:14+05:30: Updated vendor integration
 - 2026-03-26T18:16:31+05:30: Improved order flow logic
+- 2026-03-27T22:11:58+05:30: Updated map rendering
