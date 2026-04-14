@@ -147,3 +147,4 @@
 - 2026-04-07T12:22:10+05:30: Fixed location services
 - 2026-04-07T11:15:04+05:30: Fixed location services
 - 2026-04-11T11:40:39+05:30: Improved order flow logic
+- 2026-04-14T14:58:13+05:30: Enhanced push notifications
