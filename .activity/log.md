@@ -478,3 +478,4 @@
 - 2026-05-29T21:40:33+05:30: Push service rework
 - 2026-06-01T23:38:10+05:30: Geofence optimization
 - 2026-06-01T22:23:58+05:30: Geofence optimization
+- 2026-06-01T13:33:05+05:30: Payment gateway update
