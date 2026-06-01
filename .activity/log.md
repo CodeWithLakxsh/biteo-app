@@ -198,3 +198,4 @@
 - 2026-05-28T14:42:57+05:30: Enhanced push notifications
 - 2026-05-28T09:56:11+05:30: Enhanced push notifications
 - 2026-05-29T11:20:50+05:30: Fixed location services
+- 2026-06-01T18:57:27+05:30: Enhanced push notifications
