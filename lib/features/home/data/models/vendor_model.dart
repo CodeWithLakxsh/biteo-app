@@ -1,66 +1,142 @@
+// ============================================================
+// lib/features/home/data/models/vendor_model.dart
+//
+// FIX: Removed @freezed annotation and all `part` directives.
+// Plain Dart immutable class with manual copyWith.
+// No code generation required — compiles immediately.
+// ============================================================
+
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
 import '../../domain/entities/vendor_entity.dart';
 
-part 'vendor_model.freezed.dart';
-part 'vendor_model.g.dart';
+class VendorModel {
+  final String id;
+  final String businessName;
+  final String category;
+  final String fullAddress;
+  final String city;
 
-@freezed
-abstract class VendorModel with _$VendorModel {
-  const VendorModel._();
+  // ── Geo ─────────────────────────────────────────────
+  final double lat;
+  final double lng;
 
-  const factory VendorModel({
-    required String id,
-    required String businessName,
-    required String category,
-    required String fullAddress,
-    required String city,
+  // ── Operations ──────────────────────────────────────
+  final bool isActive;
+  final bool isAcceptingOrders;
+  final bool isCurrentlyOpen;
 
-    // ── Geo ───────────────────────────
-    required double lat,
-    required double lng,
+  final List<String> pickupModes;
+  final int prepTimeMinutes;
 
-    // ── Operations ────────────────────
-    required bool isActive,
-    required bool isAcceptingOrders,
-    required bool isCurrentlyOpen,
+  // ── Ratings ─────────────────────────────────────────
+  final double averageRating;
+  final int totalRatings;
 
-    required List<String> pickupModes,
-    required int prepTimeMinutes,
+  // ── Tags ────────────────────────────────────────────
+  final List<String> tags;
 
-    // ── Ratings ───────────────────────
-    required double averageRating,
-    required int totalRatings,
+  // ── Media ───────────────────────────────────────────
+  final String? imageUrl;
+  final String? coverImageUrl;
+  final String? brandLogoUrl;
 
-    // ── Tags ──────────────────────────
-    @Default(<String>[]) List<String> tags,
+  // ── Created ─────────────────────────────────────────
+  final DateTime? createdAt;
 
-    // ── Media ─────────────────────────
+  // ── Legal ───────────────────────────────────────────
+  final String? fssaiLicense;
+  final String? legalEntityName;
+  final String? gstin;
+
+  // ── Contact ─────────────────────────────────────────
+  final String? phoneNumber;
+
+  // ── Hours ───────────────────────────────────────────
+  final Map<String, dynamic>? operatingHours;
+
+  const VendorModel({
+    required this.id,
+    required this.businessName,
+    required this.category,
+    required this.fullAddress,
+    required this.city,
+    required this.lat,
+    required this.lng,
+    required this.isActive,
+    required this.isAcceptingOrders,
+    required this.isCurrentlyOpen,
+    required this.pickupModes,
+    required this.prepTimeMinutes,
+    required this.averageRating,
+    required this.totalRatings,
+    this.tags = const [],
+    this.imageUrl,
+    this.coverImageUrl,
+    this.brandLogoUrl,
+    this.createdAt,
+    this.fssaiLicense,
+    this.legalEntityName,
+    this.gstin,
+    this.phoneNumber,
+    this.operatingHours,
+  });
+
+  // ── copyWith ────────────────────────────────────────
+  VendorModel copyWith({
+    String? id,
+    String? businessName,
+    String? category,
+    String? fullAddress,
+    String? city,
+    double? lat,
+    double? lng,
+    bool? isActive,
+    bool? isAcceptingOrders,
+    bool? isCurrentlyOpen,
+    List<String>? pickupModes,
+    int? prepTimeMinutes,
+    double? averageRating,
+    int? totalRatings,
+    List<String>? tags,
     String? imageUrl,
     String? coverImageUrl,
     String? brandLogoUrl,
-
-    // ── Created ───────────────────────
     DateTime? createdAt,
-
-    // ── Legal ─────────────────────────
     String? fssaiLicense,
     String? legalEntityName,
     String? gstin,
-
-    // ── Contact ───────────────────────
     String? phoneNumber,
-
-    // ── Hours ─────────────────────────
     Map<String, dynamic>? operatingHours,
-  }) = _VendorModel;
-
-  factory VendorModel.fromJson(
-    Map<String, dynamic> json,
-  ) =>
-      _$VendorModelFromJson(json);
+  }) {
+    return VendorModel(
+      id: id ?? this.id,
+      businessName: businessName ?? this.businessName,
+      category: category ?? this.category,
+      fullAddress: fullAddress ?? this.fullAddress,
+      city: city ?? this.city,
+      lat: lat ?? this.lat,
+      lng: lng ?? this.lng,
+      isActive: isActive ?? this.isActive,
+      isAcceptingOrders: isAcceptingOrders ?? this.isAcceptingOrders,
+      isCurrentlyOpen: isCurrentlyOpen ?? this.isCurrentlyOpen,
+      pickupModes: pickupModes ?? this.pickupModes,
+      prepTimeMinutes: prepTimeMinutes ?? this.prepTimeMinutes,
+      averageRating: averageRating ?? this.averageRating,
+      totalRatings: totalRatings ?? this.totalRatings,
+      tags: tags ?? this.tags,
+      imageUrl: imageUrl ?? this.imageUrl,
+      coverImageUrl: coverImageUrl ?? this.coverImageUrl,
+      brandLogoUrl: brandLogoUrl ?? this.brandLogoUrl,
+      createdAt: createdAt ?? this.createdAt,
+      fssaiLicense: fssaiLicense ?? this.fssaiLicense,
+      legalEntityName: legalEntityName ?? this.legalEntityName,
+      gstin: gstin ?? this.gstin,
+      phoneNumber: phoneNumber ?? this.phoneNumber,
+      operatingHours: operatingHours ?? this.operatingHours,
+    );
+  }
 
   // ==========================================================
   // 🔥 FIRESTORE PARSER
@@ -424,4 +500,20 @@ abstract class VendorModel with _$VendorModel {
             operatingHours ??
                 const {},
       );
+
+  // ── Equality ────────────────────────────────────────
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is VendorModel &&
+          id == other.id &&
+          businessName == other.businessName;
+
+  @override
+  int get hashCode =>
+      id.hashCode ^ businessName.hashCode;
+
+  @override
+  String toString() =>
+      'VendorModel(id: $id, businessName: $businessName)';
 }
