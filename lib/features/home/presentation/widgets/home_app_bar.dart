@@ -12,6 +12,7 @@ import '../../../../core/router/app_router.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../auth/presentation/providers/auth_providers.dart';
 import '../../../auth/presentation/providers/auth_state.dart';
+import '../../../profile/presentation/providers/profile_providers.dart';
 import '../providers/home_providers.dart';
 
 class HomeSliverAppBar extends ConsumerWidget {
