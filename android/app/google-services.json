@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "476619872302",
+    "project_id": "biteo-1e76d",
+    "storage_bucket": "biteo-1e76d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476619872302:android:294e3b3b2a6c0b8ce9e7bf",
+        "android_client_info": {
+          "package_name": "com.biteo.biteo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476619872302-5ii6e3c025vr82h8kvsg3dkej9685rqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.biteo.biteo",
+            "certificate_hash": "0badd0c7d74b70eda6068c3b5f2b5e70fa2bc623"
+          }
+        },
+        {
+          "client_id": "476619872302-oj3vvvrcceltv73df5kn9o5ct6itjbb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApZ8m1kkZlDkyc-NmJzz3JdSd7DPt51oM"
+        },
+        {
+          "current_key": "AIzaSyDl8drs_IWoFj7Varq3x7QOzW9mHxbBTT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476619872302-oj3vvvrcceltv73df5kn9o5ct6itjbb9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "476619872302-l30arr8oa17iuoivuovop282nhdo2dd0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.biteo.biteo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476619872302:android:a079674703f35089e9e7bf",
+        "android_client_info": {
+          "package_name": "com.example.biteo_business"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476619872302-oj3vvvrcceltv73df5kn9o5ct6itjbb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApZ8m1kkZlDkyc-NmJzz3JdSd7DPt51oM"
+        },
+        {
+          "current_key": "AIzaSyDl8drs_IWoFj7Varq3x7QOzW9mHxbBTT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476619872302-oj3vvvrcceltv73df5kn9o5ct6itjbb9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "476619872302-l30arr8oa17iuoivuovop282nhdo2dd0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.biteo.biteo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476619872302:android:06e455428e2e8e69e9e7bf",
+        "android_client_info": {
+          "package_name": "com.example.biteo_vendor_panel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476619872302-oj3vvvrcceltv73df5kn9o5ct6itjbb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApZ8m1kkZlDkyc-NmJzz3JdSd7DPt51oM"
+        },
+        {
+          "current_key": "AIzaSyDl8drs_IWoFj7Varq3x7QOzW9mHxbBTT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476619872302-oj3vvvrcceltv73df5kn9o5ct6itjbb9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "476619872302-l30arr8oa17iuoivuovop282nhdo2dd0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.biteo.biteo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

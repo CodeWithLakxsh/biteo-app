@@ -1,0 +1,21 @@
+# =============================================================
+# analysis_options.yaml — Biteo lint configuration
+# =============================================================
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  errors:
+    invalid_annotation_target: ignore
+
+linter:
+  rules:
+    - always_use_package_imports
+    - avoid_print
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - use_key_in_widget_constructors
+    - cancel_subscriptions
+    - close_sinks

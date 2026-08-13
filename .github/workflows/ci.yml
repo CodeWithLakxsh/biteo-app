@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  flutter:
+    name: flutter analyze + test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.x'
+          channel: stable
+          cache: true
+
+      - name: Resolve dependencies
+        run: flutter pub get
+
+      - name: Static analysis
+        run: flutter analyze
+
+      - name: Unit tests
+        run: flutter test
+
+  secret-scan:
+    name: secret scan gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan for leaked secrets
+        run: |
+          # google-services.json and firebase_options.dart intentionally
+          # contain public Firebase client API keys (AIzaSy...) and are
+          # excluded from the scan.
+          if grep -RInE 'rzp_(test|live)_[0-9A-Za-z]{10,}|AIza[0-9A-Za-z_-]{20,}|BEGIN (RSA |EC |)PRIVATE KEY' \
+              --exclude-dir={.git,node_modules,build,.dart_tool} \
+              --exclude='google-services.json' \
+              --exclude='firebase_options.dart' \
+              .; then
+            echo "::error::Possible leaked secret found. See lines above."
+            exit 1
+          fi
+          echo "Secret scan passed."
