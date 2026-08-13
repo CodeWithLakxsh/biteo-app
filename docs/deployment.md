@@ -27,7 +27,9 @@ release:
 - [ ] `flutter test` passes.
 - [ ] Version bumped in `pubspec.yaml` and tagged `v<version>`.
 - [ ] No secrets in the tree (see [security.md](security.md)).
-- [ ] `google-services.json` matches the Play application id `com.biteo.biteo`.
+- [ ] Real `android/app/google-services.json` present in the build
+      environment and matching the Play application id `com.biteo.biteo`
+      (the committed file is only a placeholder template).
 
 ## Firebase / Cloud Functions
 

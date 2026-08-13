@@ -18,6 +18,11 @@ jobs:
           channel: stable
           cache: true
 
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
       - name: Resolve dependencies
         run: flutter pub get
 
@@ -27,6 +32,14 @@ jobs:
       - name: Unit tests
         run: flutter test
 
+      # Compile validation. Debug build only: uses the debug signing key and
+      # never requires production credentials. The Google Services Gradle
+      # plugin is not applied, google-services.json is not needed, and the
+      # Maps placeholder defaults to MISSING_KEY, so this builds cleanly with
+      # no secrets. Flutter regenerates local.properties from the SDK path.
+      - name: Android debug build (compile validation)
+        run: flutter build apk --debug
+
   secret-scan:
     name: secret scan gate
     runs-on: ubuntu-latest
@@ -34,9 +47,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Scan for leaked secrets
         run: |
-          # google-services.json and firebase_options.dart intentionally
-          # contain public Firebase client API keys (AIzaSy...) and are
-          # excluded from the scan.
+          # google-services.json is not committed (supplied via CI secrets);
+          # firebase_options.dart intentionally holds public Firebase client
+          # API keys (AIzaSy...) and is excluded from the scan.
           if grep -RInE 'rzp_(test|live)_[0-9A-Za-z]{10,}|AIza[0-9A-Za-z_-]{20,}|BEGIN (RSA |EC |)PRIVATE KEY' \
               --exclude-dir={.git,node_modules,build,.dart_tool} \
               --exclude='google-services.json' \

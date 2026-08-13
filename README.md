@@ -19,7 +19,8 @@ Cloud Functions for convenience, but this app is the primary deliverable.
 - Clean architecture: `core/` shared infrastructure + `features/` with
   `data / domain / presentation` layering per feature.
 - State management with Riverpod.
-- Android native config via `android/app/google-services.json`.
+- Android native config via `android/app/google-services.json` (supplied
+  locally, not committed; template: `android/app/google-services.json.example`).
 - Razorpay checkout (client-side via `RAZORPAY_KEY_ID`).
 - Google Maps / Places for address selection.
 

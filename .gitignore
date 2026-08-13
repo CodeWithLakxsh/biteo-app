@@ -64,6 +64,11 @@ firebase-debug.*.log*
 # .firebaserc is committed (shared project alias)
 !firebase.json
 
+# Real Android client config (android/app/google-services.json) is supplied
+# locally / via CI secrets, NOT committed. The template is committed.
+android/app/google-services.json
+!android/app/google-services.json.example
+
 # ---- Android Attestation keybox (CONTAINS ECDSA PRIVATE KEY) ---
 # linux/yk50.xml holds an Android Attestation keybox with a private key
 # and certificate chain. It must NEVER be committed.

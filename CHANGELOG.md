@@ -32,3 +32,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed `.env`, `android/local.properties`, and `functions/.env*` real
   credential files; they are now git-ignored with an `.env.example` template.
 - Removed a hardcoded Google Maps API key from Dart source.
+- `android/app/google-services.json` (Android client configuration) is now
+  git-ignored; a placeholder template `google-services.json.example` is
+  committed instead and the real file is supplied locally/CI.

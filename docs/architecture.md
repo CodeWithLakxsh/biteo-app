@@ -66,8 +66,10 @@ and `firebase.json`).
 
 ## Platform targets
 
-Only **Android** is fully configured for Firebase (`google-services.json` in
-`android/app/`). `DefaultFirebaseOptions.currentPlatform` throws
+Only **Android** is fully configured for Firebase (real client config lives in
+`android/app/google-services.json`, supplied locally and git-ignored; a
+placeholder template is committed as `google-services.json.example`).
+`DefaultFirebaseOptions.currentPlatform` throws
 `UnsupportedError` for iOS, web, macOS, Windows, and Linux; the web and
 desktop host folders are unconfigured shells.
 
