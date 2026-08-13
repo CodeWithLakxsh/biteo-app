@@ -26,6 +26,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added project documentation and a MIT license.
   - Cleaned generated build artifacts and duplicate files.
 
+### Fixed
+
+- Removed the Freezed code-generation dependency from `VendorEntity` and
+  `VendorModel` (now plain immutable Dart classes with manual `copyWith`),
+  which resolved missing-generated-file compile errors.
+- Added the missing `unreadNotificationCountProvider` import to
+  `home_app_bar.dart`.
+- CI analyzer gate now runs `flutter analyze --no-fatal-warnings
+  --no-fatal-infos`, so pre-existing style/info lints do not block the
+  build while genuine compile errors still fail it.
+- CI uses Flutter stable channel to satisfy SDK constraints and includes an
+  Android debug APK compile-validation step.
+
 ### Security
 
 - Removed Android Attestation keybox (`linux/yk50.xml`) from the repository.
