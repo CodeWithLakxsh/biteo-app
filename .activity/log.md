@@ -814,3 +814,4 @@
 - 2026-08-19T11:41:57+05:30: Order pipeline fix
 - 2026-08-20T19:04:25+05:30: Push service rework
 - 2026-08-22T10:37:14+05:30: Order pipeline fix
+- 2026-08-23T22:48:36+05:30: Payment gateway update
