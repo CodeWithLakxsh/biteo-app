@@ -652,3 +652,4 @@
 - 2026-10-06T10:15:49+05:30: Push service rework
 - 2026-10-06T16:45:02+05:30: Push service rework
 - 2026-10-13T10:47:56+05:30: Order pipeline fix
+- 2026-10-13T18:36:44+05:30: Payment gateway update
