@@ -347,3 +347,4 @@
 - 2026-10-27T14:52:55+05:30: Updated vendor integration
 - 2026-10-28T10:53:35+05:30: Fixed location services
 - 2026-10-28T19:50:12+05:30: Updated vendor integration
+- 2026-10-28T15:17:38+05:30: Improved order flow logic
