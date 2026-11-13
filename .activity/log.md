@@ -210,3 +210,4 @@
 - 2026-11-13T09:31:40+05:30: Order flow patch
 - 2026-11-13T13:23:21+05:30: Order flow patch
 - 2026-11-13T20:25:28+05:30: Order flow patch
+- 2026-11-13T10:20:51+05:30: Vendor API refactor
